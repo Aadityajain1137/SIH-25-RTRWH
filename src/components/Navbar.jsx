@@ -18,7 +18,7 @@ export default function Navbar() {
         
         {/* Left side: Logo + Text */}
         <div className="logo">
-          <img className="logo-img" src="logo main without.png" alt="Logo" />
+          <img className="logo-img" src="/logo SIH black.png" alt="Logo" />
           <span className="logo-text">जल निधि</span>
         </div>
 
