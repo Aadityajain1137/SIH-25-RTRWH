@@ -1,0 +1,126 @@
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: #B9E5E8;
+  height: 55px;  /* bigger navbar */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+/* Nav Container */
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* logo left, links right */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Logo (left side) */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo-img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #192841;
+}
+
+/* Right section (links + login icon) */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Links (right side) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.15rem;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #4d4dff;
+  transform: scale(1.05);
+}
+
+/* Login Icon */
+.login-icon {
+  font-size: 2rem;   /* size of the icon */
+  color: #192841;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.login-icon:hover {
+  color: #4d4dff;
+  transform: scale(1.1);
+}
+
+.login-img:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: #065f46;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px; /* below navbar */
+    right: 0;
+    background: #B9E5E8;
+    flex-direction: column;
+    width: 240px;
+    padding: 1rem;
+    border-radius: 0 0 0 12px;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .right-section {
+    gap: 1rem;
+  }
+
+  .login-icon {
+    font-size: 1.8rem;
+  }
+}
